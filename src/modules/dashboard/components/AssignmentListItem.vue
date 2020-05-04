@@ -1,5 +1,5 @@
 <template>
-  <div class="assignment-list-item">
+  <div class="assignment-list-item" @click="handleLaunch">
     <div class="title">
       {{ assignment.title }}
     </div>
@@ -15,6 +15,13 @@ export default {
   functional: true,
   props: {
     assignment: { type: Object, required: true }
+  },
+  methods: {
+    handleLaunch() {
+      const assignmentId = this.assignment.id;
+      const path = `/assignment/${assignmentId}`;
+      this.$router.push({ path: path });
+    }
   }
 }
 </script>

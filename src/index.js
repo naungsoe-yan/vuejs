@@ -17,7 +17,8 @@ const router = new VueRouter({
   mode: "history",
   routes: [
     { path: "/", component: LoginForm },
-    { path: "/dashboard", component: Dashboard }
+    { path: "/dashboard", component: Dashboard },
+    { path: "/assignment/:id", component: AssignmentViewer }
   ]
 });
 
